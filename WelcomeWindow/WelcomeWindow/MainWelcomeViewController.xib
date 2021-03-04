@@ -2,20 +2,139 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainWelcomeViewController" customModule="WelcomeWindow" customModuleProvider="target">
             <connections>
+                <outlet property="closeButton" destination="qcQ-bc-p1X" id="dxb-S5-G4B"/>
+                <outlet property="firstButton" destination="Fu1-oS-kfM" id="jHU-pV-L7d"/>
+                <outlet property="secondButton" destination="4OG-Jg-TdW" id="3xS-gX-TUA"/>
+                <outlet property="showOnLaunchCheckBox" destination="7UT-Tv-RuM" id="C7x-I7-Hje"/>
+                <outlet property="thirdButton" destination="prj-dc-62U" id="PpZ-I9-sLo"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+        <customView misplaced="YES" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="494" height="426"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <point key="canvasLocation" x="-136" y="154"/>
+            <subviews>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qcQ-bc-p1X" customClass="HoverButton" customModule="WelcomeWindow" customModuleProvider="target">
+                    <rect key="frame" x="12" y="400" width="13" height="13"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="close" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="qES-RI-ypk">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="hoveringImage" value="close_hover"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="notHoveringImage" value="close"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="closeWindow:" target="-2" id="Pgs-en-mfn"/>
+                    </connections>
+                </button>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="59v-CQ-gTr">
+                    <rect key="frame" x="183" y="257" width="128" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="PAz-XH-WBm"/>
+                        <constraint firstAttribute="width" constant="128" id="d5r-Sw-8Jx"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Xcode" id="gqO-ig-Ovj"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NUe-Kl-dnh">
+                    <rect key="frame" x="93" y="212" width="309" height="45"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Welcome to Xcode" id="v7q-UE-flz">
+                        <font key="font" metaFont="system" size="38"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gwz-2g-FYr">
+                    <rect key="frame" x="182" y="188" width="131" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Version 12.4 (12D4e)" id="ksG-L9-j73">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="12" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="duL-4Z-MC8">
+                    <rect key="frame" x="50" y="61" width="444" height="87"/>
+                    <subviews>
+                        <button horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fu1-oS-kfM">
+                            <rect key="frame" x="0.0" y="60" width="444" height="32"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="plus.square" catalog="system" imagePosition="leading" alignment="left" imageScaling="proportionallyDown" inset="2" id="eA5-Ea-JSn">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system" size="31"/>
+                            </buttonCell>
+                            <color key="contentTintColor" name="AccentColor"/>
+                        </button>
+                        <button horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4OG-Jg-TdW">
+                            <rect key="frame" x="0.0" y="25.5" width="444" height="34.5"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="plus.square.on.square" catalog="system" imagePosition="left" alignment="left" imageScaling="proportionallyDown" inset="2" id="Agm-OG-BXM">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system" size="29"/>
+                            </buttonCell>
+                            <color key="contentTintColor" name="AccentColor"/>
+                        </button>
+                        <button horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="prj-dc-62U">
+                            <rect key="frame" x="0.0" y="-4.5" width="444.5" height="30.5"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="folder" catalog="system" imagePosition="left" alignment="left" imageScaling="proportionallyDown" inset="2" id="3X8-b7-heH">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system" size="28"/>
+                            </buttonCell>
+                            <color key="contentTintColor" name="AccentColor"/>
+                        </button>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7UT-Tv-RuM">
+                    <rect key="frame" x="51" y="9" width="270" height="18"/>
+                    <buttonCell key="cell" type="check" title="Show this window when Xcode launches" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="pjW-3i-hvp">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="NUe-Kl-dnh" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="77w-4h-XmV"/>
+                <constraint firstItem="qcQ-bc-p1X" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="12" id="9mm-QK-nvh"/>
+                <constraint firstItem="7UT-Tv-RuM" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="53" id="Acw-Sg-3jB"/>
+                <constraint firstItem="gwz-2g-FYr" firstAttribute="top" secondItem="NUe-Kl-dnh" secondAttribute="bottom" constant="8" symbolic="YES" id="Cpf-1x-TkN"/>
+                <constraint firstItem="gwz-2g-FYr" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="ERf-2e-oDC"/>
+                <constraint firstItem="duL-4Z-MC8" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="50" id="T1L-pH-hLP"/>
+                <constraint firstItem="7UT-Tv-RuM" firstAttribute="top" secondItem="duL-4Z-MC8" secondAttribute="bottom" constant="35" id="Uwu-Vv-EwX"/>
+                <constraint firstItem="duL-4Z-MC8" firstAttribute="top" secondItem="gwz-2g-FYr" secondAttribute="bottom" constant="40" id="VRd-Am-IMA"/>
+                <constraint firstItem="NUe-Kl-dnh" firstAttribute="top" secondItem="59v-CQ-gTr" secondAttribute="bottom" id="VdH-P0-RZH"/>
+                <constraint firstItem="qcQ-bc-p1X" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="W68-8m-a2L"/>
+                <constraint firstAttribute="bottom" secondItem="7UT-Tv-RuM" secondAttribute="bottom" constant="10" id="gk7-Sj-4DZ"/>
+                <constraint firstItem="59v-CQ-gTr" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="40" id="iUi-n9-ZOd"/>
+                <constraint firstAttribute="trailing" secondItem="duL-4Z-MC8" secondAttribute="trailing" id="n2S-oq-28O"/>
+                <constraint firstItem="59v-CQ-gTr" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="vEN-7f-6pz"/>
+            </constraints>
+            <point key="canvasLocation" x="-162" y="87"/>
         </customView>
     </objects>
+    <resources>
+        <image name="Xcode" width="256" height="256"/>
+        <image name="close" width="13" height="13"/>
+        <image name="close_hover" width="13" height="13"/>
+        <image name="folder" catalog="system" width="18" height="14"/>
+        <image name="plus.square" catalog="system" width="15" height="14"/>
+        <image name="plus.square.on.square" catalog="system" width="17" height="16"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

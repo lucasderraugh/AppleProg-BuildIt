@@ -17,6 +17,7 @@
 		1D7C41A425E7E93B001EB157 /* RecentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C41A225E7E93B001EB157 /* RecentsTableViewController.swift */; };
 		1D7C41A525E7E93B001EB157 /* RecentsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D7C41A325E7E93B001EB157 /* RecentsTableViewController.xib */; };
 		1D7C41A825E7EA0A001EB157 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C41A725E7EA0A001EB157 /* SplitViewController.swift */; };
+		1DDDD4AA25F129FF00C078EA /* HoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDD4A925F129FF00C078EA /* HoverButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		1D7C41A225E7E93B001EB157 /* RecentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentsTableViewController.swift; sourceTree = "<group>"; };
 		1D7C41A325E7E93B001EB157 /* RecentsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentsTableViewController.xib; sourceTree = "<group>"; };
 		1D7C41A725E7EA0A001EB157 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		1DDDD4A925F129FF00C078EA /* HoverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				1D7C41A225E7E93B001EB157 /* RecentsTableViewController.swift */,
 				1D7C41A325E7E93B001EB157 /* RecentsTableViewController.xib */,
 				1D7C41A725E7EA0A001EB157 /* SplitViewController.swift */,
+				1DDDD4A925F129FF00C078EA /* HoverButton.swift */,
 				1D7C418B25E7E6FC001EB157 /* Assets.xcassets */,
 				1D7C418D25E7E6FC001EB157 /* MainMenu.xib */,
 				1D7C419025E7E6FC001EB157 /* Info.plist */,
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DDDD4AA25F129FF00C078EA /* HoverButton.swift in Sources */,
 				1D7C41A825E7EA0A001EB157 /* SplitViewController.swift in Sources */,
 				1D7C41A425E7E93B001EB157 /* RecentsTableViewController.swift in Sources */,
 				1D7C419A25E7E7A8001EB157 /* WelcomeWindowController.swift in Sources */,
