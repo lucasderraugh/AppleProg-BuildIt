@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="RecentsTableViewController" customModule="WelcomeWindow" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="464"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <visualEffectView blendingMode="behindWindow" material="sidebar" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="VJc-9T-Ui9">
+                    <rect key="frame" x="0.0" y="0.0" width="333" height="464"/>
+                </visualEffectView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="VJc-9T-Ui9" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="AsP-oZ-VWz"/>
+                <constraint firstAttribute="bottom" secondItem="VJc-9T-Ui9" secondAttribute="bottom" id="CaS-ko-JTM"/>
+                <constraint firstItem="VJc-9T-Ui9" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="fNv-qy-KYL"/>
+                <constraint firstAttribute="trailing" secondItem="VJc-9T-Ui9" secondAttribute="trailing" id="ufY-58-UGG"/>
+            </constraints>
+            <point key="canvasLocation" x="-208.5" y="250"/>
+        </customView>
+    </objects>
+</document>
