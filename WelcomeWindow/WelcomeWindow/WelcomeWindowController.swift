@@ -16,7 +16,7 @@ class WelcomeWindowController: NSWindowController {
         
         let splitViewController = SplitViewController()
         splitViewController.addSplitViewItem(NSSplitViewItem(viewController: MainWelcomeViewController()))
-        splitViewController.addSplitViewItem(NSSplitViewItem(viewController: RecentsTableViewController()))
+        splitViewController.addSplitViewItem(NSSplitViewItem(viewController: RecentsTableViewController(urls: [URL(fileURLWithPath: "Users/lucasderraugh/Desktop/MyPlayground.playground")])))
         contentViewController = splitViewController
     }
     
