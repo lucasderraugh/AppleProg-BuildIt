@@ -6,13 +6,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="MainWelcomeViewController" customModule="WelcomeWindow" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="MainWelcomeViewController" customModule="WelcomeFramework" customModuleProvider="target">
             <connections>
                 <outlet property="closeButton" destination="qcQ-bc-p1X" id="dxb-S5-G4B"/>
                 <outlet property="firstButton" destination="Fu1-oS-kfM" id="jHU-pV-L7d"/>
+                <outlet property="imageView" destination="59v-CQ-gTr" id="8Lp-Ni-9m1"/>
                 <outlet property="secondButton" destination="4OG-Jg-TdW" id="3xS-gX-TUA"/>
                 <outlet property="showOnLaunchCheckBox" destination="7UT-Tv-RuM" id="C7x-I7-Hje"/>
+                <outlet property="subtitleLabel" destination="gwz-2g-FYr" id="R5e-gg-Ue7"/>
                 <outlet property="thirdButton" destination="prj-dc-62U" id="PpZ-I9-sLo"/>
+                <outlet property="titleLabel" destination="NUe-Kl-dnh" id="f1F-MJ-bWe"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -22,7 +25,7 @@
             <rect key="frame" x="0.0" y="0.0" width="494" height="425"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qcQ-bc-p1X" customClass="HoverButton" customModule="WelcomeWindow" customModuleProvider="target">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qcQ-bc-p1X" customClass="HoverButton" customModule="WelcomeFramework" customModuleProvider="target">
                     <rect key="frame" x="12" y="400" width="13" height="13"/>
                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="close" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="qES-RI-ypk">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>

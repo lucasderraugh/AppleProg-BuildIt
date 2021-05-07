@@ -7,23 +7,26 @@
 
 import Cocoa
 
-class WelcomeWindowController: NSWindowController {
+public class WelcomeWindowController: NSWindowController {
+    
+    var configuration = WelcomeConfiguration.defaultConfiguration()
 
-    override func windowDidLoad() {
+    public override func windowDidLoad() {
         super.windowDidLoad()
 
         window?.isMovableByWindowBackground = true
         
         let splitViewController = SplitViewController()
-        splitViewController.addSplitViewItem(NSSplitViewItem(viewController: MainWelcomeViewController()))
-        splitViewController.addSplitViewItem(NSSplitViewItem(viewController: RecentsTableViewController(urls: [URL(fileURLWithPath: "Users/lucasderraugh/Desktop/MyPlayground.playground")])))
+        splitViewController.addSplitViewItem(NSSplitViewItem(viewController: MainWelcomeViewController(configuration: configuration)))
+        splitViewController.addSplitViewItem(NSSplitViewItem(viewController: RecentsTableViewController(urls: NSDocumentController.shared.recentDocumentURLs)))
         contentViewController = splitViewController
     }
     
-    convenience init() {
+    public convenience init(configuration: WelcomeConfiguration) {
         Defaults.registerDefaults()
         
         self.init(windowNibName: NSNib.Name(String(describing: Self.self)))
+        self.configuration = configuration
     }
     
     public func showWindow(force: Bool = false) {
@@ -33,5 +36,5 @@ class WelcomeWindowController: NSWindowController {
     }
     
     @available(*, unavailable)
-    override func showWindow(_ sender: Any?) {}
+    override public func showWindow(_ sender: Any?) {}
 }

@@ -12,9 +12,14 @@ class MainWelcomeViewController: NSViewController {
     @IBOutlet private weak var closeButton: HoverButton!
     @IBOutlet private weak var showOnLaunchCheckBox: NSButton!
     
+    @IBOutlet weak var imageView: NSImageView!
+    @IBOutlet weak var titleLabel: NSTextField!
+    @IBOutlet weak var subtitleLabel: NSTextField!
     @IBOutlet private weak var firstButton: NSButton!
     @IBOutlet private weak var secondButton: NSButton!
     @IBOutlet private weak var thirdButton: NSButton!
+    
+    let configuration: WelcomeConfiguration
     
     private struct Button {
         let title: String
@@ -29,7 +34,20 @@ class MainWelcomeViewController: NSViewController {
         setup()
     }
     
+    public init(configuration: WelcomeConfiguration) {
+        self.configuration = configuration
+        super.init(nibName: NSNib.Name(String(describing: Self.self)), bundle: .framework)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private func setup() {
+        imageView.image = configuration.image
+        titleLabel.stringValue = configuration.title
+        subtitleLabel.stringValue = configuration.subtitle
         showOnLaunchCheckBox.state = Defaults.showOnLaunch ? .on : .off
         
         let models = [

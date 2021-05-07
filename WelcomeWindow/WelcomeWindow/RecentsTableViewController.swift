@@ -18,7 +18,7 @@ class RecentsTableViewController: NSViewController {
     
     init(urls: [URL]) {
         self.urls = urls
-        super.init(nibName: String(describing: Self.self), bundle: nil)
+        super.init(nibName: String(describing: Self.self), bundle: .framework)
     }
     
     @available(*, unavailable)
@@ -31,7 +31,7 @@ class RecentsTableViewController: NSViewController {
         
         tableView.target = self
         tableView.doubleAction = #selector(doubleAction(_:))
-        tableView.register(NSNib(nibNamed: "FileTableCellView", bundle: nil), forIdentifier: cellIdentifier)
+        tableView.register(NSNib(nibNamed: "FileTableCellView", bundle: .framework), forIdentifier: cellIdentifier)
         
         tableViewDS = NSTableViewDiffableDataSource<Int, URL>(tableView: tableView, cellProvider: { (tableView, column, section, url) -> NSView in
             guard let cell = tableView.makeView(withIdentifier: cellIdentifier, owner: nil) as? FileTableCellView else {
@@ -55,7 +55,7 @@ class RecentsTableViewController: NSViewController {
     
     @objc private func doubleAction(_ sender: NSTableView) {
         let selectedRow = sender.selectedRow
-        print("Open index: \(selectedRow)")
+        NSDocumentController.shared.openDocument(withContentsOf: urls[selectedRow], display: true) { _,_,_ in }
     }
     
 }
