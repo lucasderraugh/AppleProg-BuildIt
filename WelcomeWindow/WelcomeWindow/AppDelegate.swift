@@ -13,7 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     lazy var welcomeWindowController = WelcomeWindowController()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        welcomeWindowController.showWindow(nil)
+        welcomeWindowController.showWindow(force: true)
     }
 }
 

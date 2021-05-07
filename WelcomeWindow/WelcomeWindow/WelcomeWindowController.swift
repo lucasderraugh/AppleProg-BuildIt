@@ -21,6 +21,17 @@ class WelcomeWindowController: NSWindowController {
     }
     
     convenience init() {
+        Defaults.registerDefaults()
+        
         self.init(windowNibName: NSNib.Name(String(describing: Self.self)))
     }
+    
+    public func showWindow(force: Bool = false) {
+        if force || Defaults.showOnLaunch {
+            super.showWindow(nil)
+        }
+    }
+    
+    @available(*, unavailable)
+    override func showWindow(_ sender: Any?) {}
 }

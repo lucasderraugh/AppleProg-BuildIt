@@ -26,10 +26,12 @@ class MainWelcomeViewController: NSViewController {
         
         view.addTrackingArea(NSTrackingArea(rect: .zero, options: [.mouseEnteredAndExited, .activeAlways, .inVisibleRect], owner: self, userInfo: nil))
         
-        setupButtons()
+        setup()
     }
     
-    private func setupButtons() {
+    private func setup() {
+        showOnLaunchCheckBox.state = Defaults.showOnLaunch ? .on : .off
+        
         let models = [
             Button(title: "Create a new Xcode project", subtitle: "Create an app for iPhone, iPad, Mac, Apple Watch, or Apple TV"),
             Button(title: "Clone an existing project", subtitle: "Start working on something from a Git repository."),
@@ -64,5 +66,9 @@ class MainWelcomeViewController: NSViewController {
     
     @IBAction private func closeWindow(_ sender: Any) {
         view.window?.close()
+    }
+    
+    @IBAction func showOnLaunchClicked(_ sender: NSButton) {
+        Defaults.showOnLaunch = sender.state == .on
     }
 }

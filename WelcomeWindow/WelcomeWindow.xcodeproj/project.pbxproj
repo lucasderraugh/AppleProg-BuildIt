@@ -21,6 +21,8 @@
 		1DA9948325FA63E400357A06 /* FileTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA9948125FA63E400357A06 /* FileTableCellView.swift */; };
 		1DA9948425FA63E400357A06 /* FileTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA9948225FA63E400357A06 /* FileTableCellView.xib */; };
 		1DDDD4AA25F129FF00C078EA /* HoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDD4A925F129FF00C078EA /* HoverButton.swift */; };
+		1DF42D062645C94A00FEF6ED /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF42D042645C94A00FEF6ED /* Bundle+Extensions.swift */; };
+		1DF42D072645C94A00FEF6ED /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF42D052645C94A00FEF6ED /* Defaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		1DA9948125FA63E400357A06 /* FileTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTableCellView.swift; sourceTree = "<group>"; };
 		1DA9948225FA63E400357A06 /* FileTableCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FileTableCellView.xib; sourceTree = "<group>"; };
 		1DDDD4A925F129FF00C078EA /* HoverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverButton.swift; sourceTree = "<group>"; };
+		1DF42D042645C94A00FEF6ED /* Bundle+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		1DF42D052645C94A00FEF6ED /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				1DA9948225FA63E400357A06 /* FileTableCellView.xib */,
 				1DDDD4A925F129FF00C078EA /* HoverButton.swift */,
 				1DA9947E25FA5F6100357A06 /* TableView.swift */,
+				1DF42D042645C94A00FEF6ED /* Bundle+Extensions.swift */,
+				1DF42D052645C94A00FEF6ED /* Defaults.swift */,
 				1D7C418B25E7E6FC001EB157 /* Assets.xcassets */,
 				1D7C418D25E7E6FC001EB157 /* MainMenu.xib */,
 				1D7C419025E7E6FC001EB157 /* Info.plist */,
@@ -169,9 +175,11 @@
 				1DDDD4AA25F129FF00C078EA /* HoverButton.swift in Sources */,
 				1D7C41A825E7EA0A001EB157 /* SplitViewController.swift in Sources */,
 				1D7C41A425E7E93B001EB157 /* RecentsTableViewController.swift in Sources */,
+				1DF42D062645C94A00FEF6ED /* Bundle+Extensions.swift in Sources */,
 				1DA9947F25FA5F6100357A06 /* TableView.swift in Sources */,
 				1D7C419A25E7E7A8001EB157 /* WelcomeWindowController.swift in Sources */,
 				1DA9948325FA63E400357A06 /* FileTableCellView.swift in Sources */,
+				1DF42D072645C94A00FEF6ED /* Defaults.swift in Sources */,
 				1D7C418A25E7E6FB001EB157 /* AppDelegate.swift in Sources */,
 				1D7C419F25E7E92E001EB157 /* MainWelcomeViewController.swift in Sources */,
 			);
